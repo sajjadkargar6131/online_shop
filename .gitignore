@@ -1,0 +1,38 @@
+# Python
+*.py[cod]
+__pycache__/
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+*.env
+
+# Django stuff:
+db.sqlite3
+media/
+staticfiles/
+
+# Migrations
+*/migrations/*.pyc
+*/migrations/__pycache__/
+
+# Local settings
+config/settings/local.py
+*.local
+
+# Environment folders
+venv/
+.env/
+.venv/
+env/
+
+# Logs
+*.log
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# MacOS
+.DS_Store
