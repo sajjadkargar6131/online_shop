@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'allauth.account',
     
     'accounts',
+    'pages',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -179,3 +181,4 @@ ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_EMAIL_CONFIRMATION_HTML = True
 
 
+LOGIN_REDIRECT_URL = '/home'
