@@ -14,6 +14,7 @@ from pathlib import Path
 from environs import Env
 import secrets
 
+
 env = Env()
 env.read_env()
 
