@@ -16,7 +16,7 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse("product", kwargs={"pk": self.pk})
     
-class ProductComment(models.Model):
+class Comment(models.Model):
     PRODUCT_STARS = [
         ('1', 'Very Bad'),
         ('2', 'Bad'),

@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-from .models import Product, ProductComment
+from .models import Product, Comment
 from .forms import ProductCommentForm
 
 class ProductListView(generic.ListView):
@@ -29,22 +29,8 @@ class ProductDetailView(generic.DetailView):
         return context
     
     
-# class ProductCommentCreateView(generic.CreateView):
-#     model = ProductComment
-#     form_class = ProductCommentForm
-    
-#     def form_valid(self, form):
-#         comment = form.save(commit=False)
-#         comment.product = get_object_or_404(Product, pk=self.kwargs['pk'])
-#         comment.author = self.request.user
-#         comment.save()
-#         return JsonResponse({"message":"Comment added successfully", "status": "success"})
-    
-#     def form_invalid(self, form):
-#         return JsonResponse({"message":"Comment added error", "status": "error"})
-    
 class ProductCommentCreateView(LoginRequiredMixin, generic.CreateView):
-    model = ProductComment
+    model = Comment
     form_class = ProductCommentForm
 
     def form_valid(self, form):

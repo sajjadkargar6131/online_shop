@@ -1,9 +1,9 @@
 from django import forms
-from .models import ProductComment
+from .models import Comment
 
 class ProductCommentForm(forms.ModelForm):
     class Meta:
-        model = ProductComment
+        model = Comment
         fields = ['body', 'star']
         labels = {
             'body' : 'متن',
