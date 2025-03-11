@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'allauth',
     'allauth.account',
+    'rosetta',
     
     'accounts',
     'pages',
@@ -154,8 +155,12 @@ USE_I18N = True
 USE_TZ = True
 
 LOCALE_PATHS = [
-    BASE_DIR / 'locale',  
+    os.path.join(BASE_DIR, 'locale'),
 ]
+ROSETTA_LANGUAGES =(
+    ('en', 'English'),
+    ('fa', 'Persian'),
+)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
