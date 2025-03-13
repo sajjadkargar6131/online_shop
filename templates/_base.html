@@ -27,7 +27,7 @@
 
 <body dir='rtl'>
 
-    {% comment %} <!-- Preloader Start -->
+    <!-- Preloader Start -->
     <div class="ShoppingYar-preloader active">
         <div class="ShoppingYar-preloader-inner h-100 d-flex align-items-center justify-content-center">
             <div class="ShoppingYar-child ShoppingYar-bounce1"></div>
@@ -35,7 +35,7 @@
             <div class="ShoppingYar-child zuka-bounce3"></div>
         </div>
     </div>
-    <!-- Preloader End --> {% endcomment %}
+    <!-- Preloader End -->
 
     <!-- Main Wrapper Start -->
     <div class="wrapper">
@@ -128,7 +128,13 @@
             </div>
         </header>
         <!-- Header End -->
-
+        {% if messages %}
+           {% for message in messages %}
+                <div class="alert alert-{{message.tags}} container" role="alert">
+                    {{message}}
+                </div>
+           {% endfor %}
+        {% endif %}
         <!-- Main Content Wrapper Start -->
         {% block content %}
         {% endblock content %}

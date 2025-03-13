@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404
 from django.views import generic
 from django.http import JsonResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
 
 
 from .models import Product, Comment
@@ -38,7 +39,9 @@ class ProductCommentCreateView(LoginRequiredMixin, generic.CreateView):
         comment.product = get_object_or_404(Product, pk=self.kwargs["pk"])
         comment.author = self.request.user
         comment.save()
+        messages.success(self.request, 'نظر شما با موفقیت ثبت شد')
         return JsonResponse({"message": "Comment added successfully", "status": "success"})
 
     def form_invalid(self, form):
+        messages.error(self.request, 'مشکلی در ثبت کامنت بوجود آمد')
         return JsonResponse({"message": "Error submitting comment", "status": "error", "errors": form.errors})

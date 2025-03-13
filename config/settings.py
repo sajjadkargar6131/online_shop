@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from environs import Env
+from django.contrib.messages import constants as messages
 import secrets
 import os
 
@@ -192,3 +193,10 @@ ACCOUNT_EMAIL_CONFIRMATION_HTML = True
 
 
 LOGIN_REDIRECT_URL = '/home'
+
+
+
+MESSAGE_TAGS = {
+    
+    messages.ERROR: "danger", 
+}
