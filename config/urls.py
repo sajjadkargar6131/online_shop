@@ -23,6 +23,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('home/', include('pages.urls')),
     path('products/', include('products.urls')),
+    path('cart/', include('cart.urls')),
 ]
 
 if 'rosetta' in settings.INSTALLED_APPS:
