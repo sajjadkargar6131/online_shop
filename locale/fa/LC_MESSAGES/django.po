@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-11 22:04+0330\n"
+"POT-Creation-Date: 2025-03-22 13:24+0330\n"
 "PO-Revision-Date: 2025-03-11 22:05+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,39 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: .\products\models.py:22
-msgid "Very Bad"
-msgstr "خیلی بد"
-
-#: .\products\models.py:23
-msgid "Bad"
-msgstr "بد"
-
-#: .\products\models.py:24
-msgid "Normal"
-msgstr "نرمال"
-
-#: .\products\models.py:25
-msgid "Good"
-msgstr "خوب"
-
-#: .\products\models.py:26
-msgid "Very Good"
-msgstr "خیلی خوب"
-
-#: .\products\templates\products\product_detail.html:71
+#: .\products\templates\products\product_detail.html:74
 msgid "description"
 msgstr "توضیحات"
 
-#: .\products\templates\products\product_detail.html:74
+#: .\products\templates\products\product_detail.html:77
 msgid "features"
 msgstr "ویژگی ها"
 
-#: .\products\templates\products\product_detail.html:77
+#: .\products\templates\products\product_detail.html:80
 msgid "comments"
 msgstr "نظرات"
 
-#: .\products\templates\products\product_detail.html:93
+#: .\products\templates\products\product_detail.html:96
 msgid "weight"
 msgstr "وزن"
 
@@ -118,8 +98,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:318
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
-" hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:330
@@ -338,8 +318,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1564
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1569
@@ -518,8 +498,7 @@ msgid "Many-to-many relationship"
 msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the
-#. label
+#. characters will prevent the default label_suffix to be appended to the label
 #: .\venv\Lib\site-packages\django\forms\boundfield.py:185
 msgid ":?.!"
 msgstr ""
@@ -569,8 +548,7 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:637
 #, python-format
-msgid ""
-"Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -677,8 +655,7 @@ msgid "The inline value did not match the parent instance."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1450
-msgid ""
-"Select a valid choice. That choice is not one of the available choices."
+msgid "Select a valid choice. That choice is not one of the available choices."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1594
@@ -1138,10 +1115,10 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:45
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
-" including the “Referrer-Policy: no-referrer” header, please remove them. "
-"The CSRF protection requires the “Referer” header to do strict referer "
-"checking. If you’re concerned about privacy, use alternatives like <a "
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
 "rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 
@@ -1252,10 +1229,10 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:208
 #, python-format
 msgid ""
-"You are seeing this page because <a "
-"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
-"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
-"and you have not configured any URLs."
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:217
@@ -1281,3 +1258,18 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "Very Bad"
+#~ msgstr "خیلی بد"
+
+#~ msgid "Bad"
+#~ msgstr "بد"
+
+#~ msgid "Normal"
+#~ msgstr "نرمال"
+
+#~ msgid "Good"
+#~ msgstr "خوب"
+
+#~ msgid "Very Good"
+#~ msgstr "خیلی خوب"
