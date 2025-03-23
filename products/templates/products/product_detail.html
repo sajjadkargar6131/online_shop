@@ -175,6 +175,7 @@
                                                                 </div>
                                                             </div>
                                                         </form> {% endcomment %}
+                                                    
                                                         <form action="{% url "product_comment" product.id %}" method="post" id="comment-form">
                                                             {% csrf_token %}
                                                             {{form|crispy}}
@@ -185,7 +186,7 @@
                                                 </div>
                                             </div>
                                             {% else %}
-                                            <p>جهت ثبت نظر ابتدا وارد شوید</p>
+                                            <p>جهت ثبت نظر ابتدا <a href="{% url "account_login" %}">وارد</a> شوید</p>
                                         {% endif %}
                                     </div>
                                 </div>
