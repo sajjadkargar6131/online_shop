@@ -31,6 +31,12 @@ def remove_from_cart_view(request, product_id):
      product = get_object_or_404(Product, id=product_id)
      cart.remove_from_cart(product)
      return redirect('cart:cart_detail')
+ 
+ 
+def empty_cart_view(request):
+     cart = Cart(request)
+     cart.empty()
+     return redirect('cart:cart_detail')
         
     
     

@@ -66,9 +66,10 @@ class Cart:
     def __len__(self) :
         return sum(item['quantity'] for item in self.cart.values())
     
-    def clear(self):
-        del self.session['cart']
+    def empty(self):
+        self.session.pop('cart', None)
         self.save()
+        messages.success(self.request, _('Cart successfully empty'))
         
     def total_price(self):
         
