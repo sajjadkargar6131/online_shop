@@ -43,7 +43,7 @@ class Cart:
         
         product_id = str(product.id)
         if product_id in self.cart:
-            del self.cart[product_id]
+            self.cart.pop(product_id, None)
             messages.success(self.request, _('Product successfully removed from Cart'))
             self.save() 
 
@@ -67,9 +67,17 @@ class Cart:
         return sum(item['quantity'] for item in self.cart.values())
     
     def empty(self):
-        self.session.pop('cart', None)
-        self.save()
-        messages.success(self.request, _('Cart successfully empty'))
+        if not self.cart:
+            messages.info(self.request, _('Cart is already empty'))
+        else:
+            try:
+                del self.session['cart']
+            except KeyError:
+                pass  # اگر cart در session وجود نداشت
+            self.cart = {}
+            self.save()
+            messages.success(self.request, _('Cart successfully emptied'))
+
         
     def total_price(self):
         

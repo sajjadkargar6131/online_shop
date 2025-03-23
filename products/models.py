@@ -1,6 +1,7 @@
 from django.db import models
 from django.shortcuts import reverse
 from django.contrib.auth import get_user_model
+from PIL import Image
 
 class Product(models.Model):
     title = models.CharField(max_length=100)
@@ -17,6 +18,20 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse("product", kwargs={"pk": self.pk})
     
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)  # ابتدا تصویر ذخیره می‌شود
+        if self.cover and self.cover.name :
+            img_path = self.cover.path  # مسیر تصویر ذخیره‌شده
+            img = Image.open(img_path)
+
+            max_size = (400, 400)  # حداکثر عرض و ارتفاع
+
+            # تغییر سایز تصویر (حفظ نسبت‌ها)
+            img.thumbnail(max_size)
+
+            # ذخیره مجدد تصویر با کیفیت بهینه
+            img.save(img_path, format='JPEG', quality=80)  # کاهش کیفیت برای کاهش حجم
+        
 class Comment(models.Model):
     PRODUCT_STARS = [
         ('1', 'Very Bad'),

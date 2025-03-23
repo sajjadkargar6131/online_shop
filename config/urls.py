@@ -26,8 +26,9 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('cart/', include('cart.urls')),
 ]
-
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 if 'rosetta' in settings.INSTALLED_APPS:
     urlpatterns+=[
          re_path(r'^rosetta/', include('rosetta.urls'))
-    ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+    ] 
